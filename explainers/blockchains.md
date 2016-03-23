@@ -68,7 +68,7 @@ Every node in a blockchain network "assembles" its view of **what the data is** 
 
 This is roughly analogous to the difference between being told a fact in a class and performing a mathematical proof in class based on assumptions provided by a teacher. One only requires acceptance by the "receiver" while the other requires effort by the "assembler".
 
-The fundamental difference architecturally is, essentially, the "freedom" which the various nodes on the network have to tell clients which are hooked into them **what the data is**. This "freedom" is what blockchain-ers are (sometimes) talking about when the speak to the "decentralization" benefits of the blockchain client in question.
+The fundamental difference architecturally is, essentially, the "freedom" which the various nodes on the network have to tell clients which are hooked into them **what the data is**. This "freedom" is what blockchain-ers are (sometimes) talking about when they speak about the "decentralization" benefits of the blockchain client in question.
 
 ## Automation Within a Blockchain Network and Blockchain Clients
 
