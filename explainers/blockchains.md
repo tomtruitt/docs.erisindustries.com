@@ -8,7 +8,7 @@ excerpt:    "What is a Blockchain and why are these automated data management sy
 
 # What is a Blockchain?
 
-Blockchains have their origins in cryptocurrency platforms, in particular bitcoin, where they represent historical records of verifiable monetary stake. They were designed in the first place to solve the double spending problem, that is, to establish consensus in a decentralized network over who owns what and what has already been spent.
+Blockchains have their origins in cryptocurrency platforms, in particular Bitcoin, where they represent historical records of verifiable monetary stake. They were designed in the first place to solve the double spending problem, that is, to establish consensus in a decentralized network over who owns what and what has already been spent.
 
 Blockchains are authenticated records of the history of a network's activity distributed among the users of the blockchain all around the globe. A blockchain enables secure storage of arbitrary information -- in some cases, a token balance; in other systems more complex information -- within the network simply by securing a set of private keys.
 
