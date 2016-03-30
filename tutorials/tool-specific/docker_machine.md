@@ -37,7 +37,7 @@ Future releases of `eris` will further simplify the process (and abstract away t
 
 # Setup & Basic Commands
 
-This section is tailored for OSX/Windows. If you are on Linux you can use if you like, but mostly it should be thought of as informational.
+This section is tailored for OSX/Windows. Docker Toolbox is unavailabe for Linux, so if you are on Linux it should be mostly thought of as informational.
 
 After installing the toolbox, clicking the `Docker Quickstart Terminal` will open a new terminal window.
 
