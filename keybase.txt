@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/billings
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://docs.erisindustries.com
+  * I am billings (https://keybase.io/billings) on keybase.
+  * I have a public key with fingerprint 6ADE 9C7C 9467 C062 D2AD  7D47 DF6F E097 F3C8 AE8A
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101a9aa798529c11bae446b37d0abe309e33c707920cccaac3eca5f3d7a19ff74150a",
+            "fingerprint": "6ade9c7c9467c062d2ad7d47df6fe097f3c8ae8a",
+            "host": "keybase.io",
+            "key_id": "df6fe097f3c8ae8a",
+            "kid": "0101a9aa798529c11bae446b37d0abe309e33c707920cccaac3eca5f3d7a19ff74150a",
+            "uid": "4b5715205985385ec582e1f2dc579319",
+            "username": "billings"
+        },
+        "service": {
+            "hostname": "docs.erisindustries.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1459640414,
+    "expire_in": 157680000,
+    "prev": "594cbb4001724dc5b40cc16a002a7f6ab6386bc8cca5b61725799a14cc9bc119",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMIsAnicrVJbSBVBGF4vqRlFRBerh3JB7GI6s/c9GhmkkIRGZscyPM3Ozuricfe4
+u8dLJQTRg1GGij4UhZgZaS9JURCa3QPrxSztQp5ACAoihAorolmxtx6bl5n5+b7v
+/76f/8HiBCY1LlyU7OSPTW+NG73bE2WCTHnlEVaz9SY2cIStIXMXCevE9UI1ps4G
+WAABRCpCsqqInIoh1BARBEnjZR0gjfBAJTyPZSCrHMAYI4R5gpFo8LqMoGoYsgBF
+gNgs1jCtKuJEHNPyqKyEdKJiGauCJGMgcTqHdFkXZN2QDAJU2eCxgojiE6tt12dQ
+cxpySbZp0xr9hObs/QP/n31H5+QETZShyAGRyvGKSLCocAQanI5FWeWh6gNd4lio
+llC0ZobDNK7LNmextFpvYuIP1k8yj9Bt7GYTx3RNS4+6nmMSNxvbtVQm4tieje0w
+BVV7XsQN+CJeU8RnNRAtNK8X0iiT9qCMeuK4pm2xAUiR2DP9BlAQVUkAAhSyWNIY
+MR0SMn2EKEsKoMfvQ+qppKgKWNMEAKDMCTQNfWIMJQQAh2RDQprEK5KGFToiUZMo
+iOZVERQwVjU6VT+4S+osmw3w1CaqopKuWWUhL+oQtvneyMFEJi6VSVoQ768ak7pw
+6d8F/NWcwgw9Pph8umcNRDOxR2ToeHzhyUVwsv7Y29JXz8sqnv3oX5LydHlc6fXC
+CytnOy+na3XFObe+Xqr8NN7efWLVzQQxlnGx6OmpjnUtwROZsyU/v35LGNwiRNNX
+VO2cfncjD8Tath06/CVYlpj28GhL9aaCCHmFq6/kjIylTYiXrYo7sUznc86OAXI1
+ddi7PbXrwMRUx+6isc35Lx+u+XiucfhaWvRJc3lkVWn39/4PZ7JbM/ZnVI53rYWr
+k0b6pkHB3txNo+XB4yUNZKCC6b22vq0k9qIv/nXT7+1v2gvGNp4dPC/mjRrLlNz7
+4boN+ypCrZ0t1vCMkc58vxJ8X3xH6t0z2fUHYPRB4Q==
+=jWDK
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/billings
+
+==================================================================
