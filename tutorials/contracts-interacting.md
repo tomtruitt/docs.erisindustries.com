@@ -81,6 +81,8 @@ var erisC = require('eris-contracts');
 // url of your chain with:
 // docker-machine ls
 // and find the docker machine name you are using (usually default or eris).
+// for example, if the URL returned by docker-machine is tcp://192.168.99.100:2376
+// then your erisdbURL should be http://192.168.99.100:1337/rpc
 var erisdbURL = "http://localhost:1337/rpc";
 
 // get the abi and deployed data squared away
@@ -135,7 +137,7 @@ getValue(changeValue);
 
 The code should be self explanatory if you understand even a little bit of javascript. Once we properly instantiate all of the objects then there are three functions.
 
-The first function, the `getValue` function will call the `get` function of `idi.sol` (see the previous tutorial for the code of that contract) and then it will display the result of that to the command line. There is some funkiness with the returns that we get from the contracts right now (another thing we're working to smooth out), so for now we have to display `result['c'][0]` rather than just `result`. This function takes a callback which fires after the result of the call to idi.sol's get function (which simply returns the `storedData`).
+The first function, the `getValue` function will call the `get` function of `idi.sol` (see the previous tutorial for the code of that contract) and then it will display the result of that to the command line. This function takes a callback which fires after the result of the call to idi.sol's get function (which simply returns the `storedData`).
 
 The second function is a simple function which will prompt the user to change the value (there is no validation here to make sure it is a number, so when playing with this just sure make it is a number). Once the user has entered what the value should be then the `setValue` function will be called.
 
