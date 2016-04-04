@@ -11,7 +11,7 @@ This tutorial is a continuation of the previous tutorial on making a permissed c
 
 # Introduction
 
-In general what is going to happen here is that we are going to establish what we at Eris call a "peer sergeant major" node who is responsible for being the easy connection point for any nodes which need to connect into the system. While we understand that decentralized purists will not like the single point of failure, at this point it is the most viable way to orchestrate a blockchain network.
+In general what is going to happen here is that we are going to establish what we at Eris call a "peer sergeant major" node who is responsible for being the easy connection point for any nodes which need to connect into the system.
 
 In addition to the one "peer sergeant major" we will also deploy six "peer sergeants" who will be cloud based validator nodes.
 
@@ -70,6 +70,17 @@ node_laddr = "0.0.0.0:46656"
 rpc_laddr = "0.0.0.0:46657"
 vm_log = false
 ```
+
+**N.B.**
+
+For decentralized purists that may not like a single point of failure, a comma delimited list of validators is also an acceptable value for `seeds`. To find the IP addresses of all machines:
+
+```bash
+$ docker-machine ls
+```
+In this case you'll copy the IP address and disregard the port `:2376` which is used by docker-machine.
+
+**End N.B.**
 
 Note that in the `seeds` field you will use the IP address from docker-machine ip command rather than the `XX.XX.XX.XX` in the above.
 
