@@ -366,7 +366,7 @@ What is that error about? Well, what its telling us is that we cannot connect. C
 
 ## Add a Dependency to The Service Definition File
 
-To edit a service definition file we can either open `~/.eris/services/NAME.toml` in our favorit text editor, of if you have an EDITOR variable set in for your shell then just
+To edit a service definition file we can either open `~/.eris/services/idi.toml` in our favorit text editor, of if you have an EDITOR variable set in for your shell then just
 
 ```bash
 eris services edit idi
