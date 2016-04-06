@@ -56,8 +56,13 @@ or
 ```bash
 $ ls ~/.eris/keys/data
 ```
+That's it. Now it's in the right position on your host. Opptionally, to export all keys from the keys container you can use the data command:
 
-That's it. Now it's in the right position on your host. To import a key we do the reverse.
+```bash
+$ eris data export keys /home/eris/.eris/keys/data ~/.eris/keys
+```
+
+ To import a key we do the reverse.
 
 # Importing a key
 
