@@ -73,7 +73,7 @@ vm_log = false
 
 **N.B.**
 
-For decentralized purists that may not like a single point of failure, a comma delimited list of validators is also an acceptable value for `seeds`. To find the IP addresses of all machines:
+For decentralized purists that may not like a single point of failure, a comma delimited list of peer IP addresses may be entered for `seeds`. To find the IP addresses of all machines:
 
 ```bash
 $ docker-machine ls
