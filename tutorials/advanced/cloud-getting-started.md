@@ -88,10 +88,23 @@ docker-machine create --driver digitalocean --digitalocean-size 1gb --digitaloce
 docker-machine create --driver digitalocean --digitalocean-size 1gb --digitalocean-region sfo1 my-advchain-val-002
 docker-machine create --driver digitalocean --digitalocean-size 1gb --digitalocean-region tor1 my-advchain-val-003
 ```
+As stated above, feel free to substitute your favorite cloud provider for digital ocean, or virtualbox even if you just wanted to run this tutorial locally; just note that for other cloud providers you would use the appropriate flags for that provider instead of the `--digitalocean-region` flag (as we will see in the next section with AWS there can be more than one additional flag required).
 
-It will take some time to provision those machines. If you wanted to do it faster you could background the first three jobs. As stated above, feel free to substitute your favorite cloud provider for digital ocean, or virtualbox even if you just wanted to run this tutorial locally; just note that for other cloud providers you would use the appropriate flags for that provider instead of the `--digitalocean-region` flag (as we will see in the next section with AWS there can be more than one additional flag required).
+It will take some time to provision those machines. If you want to do it faster you can background these jobs in the default region: 
 
-Note that we use 1gb droplet sizes as go has a bit of trouble building `eris` on smaller boxes due to lower RAM capacity. Alternatively, you could install from apt-get.
+```bash
+DO_TOKEN=your_token
+for i in `seq 0 3`
+do
+  docker-machine create --driver digitalocean --digitalocean-size 1gb --digitalocean-access-token $DO_TOKEN "my-adv-chain-val-00$i" &
+done
+```
+
+Note that we use 1gb droplet sizes as go has a bit of trouble building `eris` on smaller boxes due to lower RAM capacity. Alternatively, you could install `eris` on smaller boxes from apt-get which is explained in the **Install Eris** section below. For local apt-get installation do this:
+
+```bash
+apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys DDA1D0AB && echo "deb https://apt.eris.industries trusty main" > /etc/apt/sources.list.d/eris.list && apt-get update && apt-get install eris && eris init --yes
+```
 
 Nothing within this tutorial requires that Digital Ocean be used; the beauty of the docker-machine approach is that it normalizes working with docker engines running in the cloud. As we will see later, once one of these machines is "in scope" Eris can easily connect to it and run `eris` commands against the remote docker engine in the cloud. Pretty neat!
 
@@ -161,6 +174,18 @@ Building eris.
 ```
 
 That means you don't have enough RAM on the machine to build eris. Sometimes this can be fixed by restarting a machine and rebuilding eris. Sometimes it requires migration to a larger machine.
+
+**Removing Docker-Machines**
+
+`docker-machine rm -f your_machine_name` will stop and force remove a named machine. Optionally you can use a loop to remove all machines by name starting with certain prefixes:
+
+```bash
+for i in `seq 0 $VALS`
+do
+  docker-machine rm -f "my-adv-chain-val-00$i"
+done
+```
+Or remove all machines with `docker-machine rm -f $(docker-macine ls -q)`
 
 # The Advantages of Using Docker Machine To Build Collaborative Software
 
