@@ -46,10 +46,7 @@ AWS_VPC_ID=your_vpc
 
 To check check these variables:
 
-```bash
- env | grep AWS
-```
-(_or_ `env | grep DIGIT`).
+`env | grep AWS` _or_ `env | grep DIGIT`
 
 # Introduction
 
