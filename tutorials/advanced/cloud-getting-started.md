@@ -90,14 +90,15 @@ docker-machine create --driver digitalocean --digitalocean-size 1gb --digitaloce
 ```
 As stated above, feel free to substitute your favorite cloud provider for digital ocean, or virtualbox even if you just wanted to run this tutorial locally; just note that for other cloud providers you would use the appropriate flags for that provider instead of the `--digitalocean-region` flag (as we will see in the next section with AWS there can be more than one additional flag required).
 
-It will take some time to provision those machines. If you want to do it faster you can background these jobs in the default region: 
+It will take some time to provision those machines. If you want to do it faster you can background the firt three jobs in the default region: 
 
 ```bash
 DO_TOKEN=your_token
-for i in `seq 0 3`
+for i in `seq 0 2`
 do
   docker-machine create --driver digitalocean --digitalocean-size 1gb my-adv-chain-val-00$i &
 done
+docker-machine create --driver digitalocean --digitalocean-size 1gb my-adv-chain-val-003
 ```
 
 Note that we use 1gb droplet sizes as go has a bit of trouble building `eris` on smaller boxes due to lower RAM capacity. Alternatively, you could install `eris` on smaller boxes from apt-get which is explained in the **Install Eris** section below. For local apt-get installation do this:
