@@ -96,7 +96,7 @@ It will take some time to provision those machines. If you want to do it faster 
 DO_TOKEN=your_token
 for i in `seq 0 3`
 do
-  docker-machine create --driver digitalocean --digitalocean-size 1gb --digitalocean-access-token $DO_TOKEN "my-adv-chain-val-00$i" &
+  docker-machine create --driver digitalocean --digitalocean-size 1gb "my-adv-chain-val-00$i" &
 done
 ```
 
