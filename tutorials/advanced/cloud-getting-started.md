@@ -48,7 +48,7 @@ To check check these variables:
 
 `env | grep AWS` _or_ `env | grep DIGIT`
 
-If you will be reusuing the same environment variables you may want to add these lines to '~/.bashrc`.
+If you will be reusuing the same environment variables you may want to add these lines to `~/.bashrc`.
 
 # Introduction
 
