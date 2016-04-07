@@ -93,7 +93,6 @@ As stated above, feel free to substitute your favorite cloud provider for digita
 It will take some time to provision those machines. If you want to do it faster you can background the firt three jobs in the default region: 
 
 ```bash
-DO_TOKEN=your_token
 for i in `seq 0 2`
 do
   docker-machine create --driver digitalocean --digitalocean-size 1gb my-adv-chain-val-00$i &
