@@ -48,6 +48,8 @@ To check check these variables:
 
 `env | grep AWS` _or_ `env | grep DIGIT`
 
+If you will be reusuing the same environment variables you may want to add these lines to '~/.bashrc`.
+
 # Introduction
 
 To make our advanced chain run over non-proprietary lines we are going to deploy this chain to four digital ocean nodes in four different data centers and three AWS machines in three data centers. Obviously you may not want to do something this complex, so you can mix and match data centers and cloud providers with relative ease if you have even a base understanding of docker machine.
