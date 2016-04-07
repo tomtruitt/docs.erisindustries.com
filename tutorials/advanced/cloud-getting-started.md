@@ -28,30 +28,28 @@ Should you have no credentials or prefer not to utilize **any** cloud provider, 
 
 The final dependency is that this tutorial will assume that you have added the proper credentials for whatever docker-machine driver you are using as environment variables. If you have not added them as environment variables then please add the necessary flags for the driver you will be using.
 
-For Digital Ocean to set the environment variables:
+For Digital Ocean:
 
 ```bash
-$ export DIGITALOCEAN_ACCESS_TOKEN=your_key
-$ export DIGITALOCEAN_REGION=your_region
+export DIGITALOCEAN_ACCESS_TOKEN=your_key DIGITALOCEAN_REGION=your_region
 ```
 
 For AWS:
 
 ```bash
-$ export AWS_ACCESS_KEY_ID=your_id
-$ export AWS_DEFAULT_REGION=your_region
-$ export AWS_SECRET_ACCESS_KEY=your_key
-$ export AWS_SECURITY_GROUP=your_group
-$ export AWS_VPC_ID=your_vpc
+export AWS_ACCESS_KEY_ID=your_id\
+AWS_DEFAULT_REGION=your_region\
+AWS_SECRET_ACCESS_KEY=your_key\
+AWS_SECURITY_GROUP=your_group\
+export AWS_VPC_ID=your_vpc
 ```
 
-An easy way to get your environment variables is:
+To check check these variables:
 
 ```bash
-$ env | grep AWS
+ env | grep AWS
 ```
-
-(or `$ env | grep DIGIT`).
+(_or_ `env | grep DIGIT`).
 
 # Introduction
 
