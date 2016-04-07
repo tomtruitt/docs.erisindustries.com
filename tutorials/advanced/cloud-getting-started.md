@@ -41,7 +41,7 @@ export AWS_ACCESS_KEY_ID=your_id\
 AWS_DEFAULT_REGION=your_region\
 AWS_SECRET_ACCESS_KEY=your_key\
 AWS_SECURITY_GROUP=your_group\
-export AWS_VPC_ID=your_vpc
+AWS_VPC_ID=your_vpc
 ```
 
 To check check these variables:
