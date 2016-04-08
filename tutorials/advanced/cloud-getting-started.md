@@ -26,7 +26,7 @@ This tutorial also assumes that you have keys for Digital Ocean and AWS accounts
 
 Should you have no credentials or prefer not to utilize **any** cloud provider, this tutorial can still be utilized. Just utilize the `--driver virtualbox` and run everything from your machine.
 
-The final dependency is that this tutorial will assume that you have added the proper credentials for whatever docker-machine driver you are using as environment variables. If you have not added them as environment variables then please add the necessary flags for the driver you will be using.
+The final dependency is that this tutorial will assume that you have added the proper credentials for whatever docker-machine driver you are using as environment variables. If you have not added them as environment variables then please add the necessary flags for the driver you will be using. If you will be reusuing the same environment variables you may want to add these lines to `~/.bashrc`.
 
 For Digital Ocean:
 
@@ -48,7 +48,6 @@ To check check these variables:
 
 `env | grep AWS` _or_ `env | grep DIGIT`
 
-If you will be reusuing the same environment variables you may want to add these lines to `~/.bashrc`.
 
 # Introduction
 
