@@ -83,7 +83,7 @@ do
     sed -e 's/fast_sync.*$/fast_sync = true/g' \
     > ~/.eris/chains/$chain_name/"$chain_name"_validator_00"$i"/config.toml
   # start the chain on this machine with a logs rotator on (a good practice for validator nodes)
-  eris chains new --dir $chain_name/"$chain_name"_validator_00"$i" --machine "$machine_base-$i" --logsrotate $chain_name
+  eris chains new --dir $chain_name/"$chain_name"_validator_00"$i" --machine "$machine_base-$i" --logrotate $chain_name
 done
 ```
 
