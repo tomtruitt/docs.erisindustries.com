@@ -27,7 +27,7 @@ The tutorial follow the same sequence as the beginner tutorials only with more d
 
 [Deploy Your Own Chain to Cloud Nodes](chain-deploying/)
 
-[Update and Maintain Your Chain](chain-maintaining/)
+<!-- [Update and Maintain Your Chain](chain-maintaining/) -->
 
 ## Step 3 -- Build (and run) your distributed application
 
