@@ -182,18 +182,6 @@ Building eris.
 
 That means you don't have enough RAM on the machine to build eris. Sometimes this can be fixed by restarting a machine and rebuilding eris. Sometimes it requires migration to a larger machine.
 
-**Removing Docker-Machines**
-
-`docker-machine rm -f your_machine_name` will stop and force remove a named machine. Optionally you can use a loop to remove all machines by name starting with certain prefixes:
-
-```bash
-for i in `seq 0 6`
-do
-  docker-machine rm -f "my-adv-chain-val-00$i"
-done
-```
-Or remove all Docker machines with `docker-machine rm -f $(docker-machine ls -q)`
-
 # The Advantages of Using Docker Machine To Build Collaborative Software
 
 OK, let's get real for a minute. This technology is all about providing a framework for business process automation for the information age. But what that means is that we have to be able to work together. Gated access to machines is one of the best ways docker machine helps us at Eris.
