@@ -29,7 +29,7 @@ eris chains start
   -a, --api           turn the chain on using erisdb's api (default true)
   -e, --env value     multiple env vars can be passed using the KEY1=val1,KEY2=val2 syntax (default [])
   -l, --links value   multiple containers can be linked can be passed using the KEY1:val1,KEY2:val2 syntax (default [])
-  -z, --logsrotate    turn on logsrotate as a dependency to handle long output
+  -z, --logrotate     turn on logrotate as a dependency to handle long output
   -p, --publish       publish random ports
 ```
 

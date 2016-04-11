@@ -25,6 +25,7 @@ eris keys import ADDR
 
 ```
       --addr string   address of key to import
+      --all           import all keys. do not provide any arguments
       --src string    source on host to import from. give full filepath to key (default "/home/ubuntu/.eris/keys/data")
 ```
 

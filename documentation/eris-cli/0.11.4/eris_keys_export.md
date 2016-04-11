@@ -26,6 +26,7 @@ eris keys export ADDR
 
 ```
       --addr string   address of key to export
+      --all           export all keys. do not provide any arguments
       --dest string   destination for export on host (default "/home/ubuntu/.eris/keys/data")
 ```
 
