@@ -24,7 +24,7 @@ eris init
       --pull-images     by default, pulls and/or update latest primary images. use flag to skip pulling/updating of images. (default true)
       --source string   source from which to download definition files for the eris platform. if toadserver fails, use: rawgit (default "rawgit")
       --testing         DO NOT USE (for testing only)
-      --yes             over-ride command-line prompts
+  -y, --yes             over-ride command-line prompts
 ```
 
 ## Options inherited from parent commands
