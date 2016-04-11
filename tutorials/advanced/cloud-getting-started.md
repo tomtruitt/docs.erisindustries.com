@@ -96,9 +96,9 @@ It will take some time to provision those machines. If you want to do it faster 
 ```bash
 for i in `seq 0 2`
 do
-  docker-machine create --driver digitalocean --digitalocean-size 1gb my-adv-chain-val-00$i &
+  docker-machine create --driver digitalocean --digitalocean-size 1gb my-advchain-val-00$i &
 done
-docker-machine create --driver digitalocean --digitalocean-size 1gb my-adv-chain-val-003
+docker-machine create --driver digitalocean --digitalocean-size 1gb my-advchain-val-003
 ```
 
 Note that we use 1gb droplet sizes as go has a bit of trouble building `eris` on smaller boxes due to lower RAM capacity. Alternatively, you could install `eris` on smaller boxes from apt-get which is explained in the **Install Eris** section below. For local apt-get installation do this:
@@ -151,18 +151,24 @@ Since this is a tutorial, we want to cover how easy it is to install eris on clo
 
 What we are going to do is to pipe a shell file into a shell. Some folks get freaked out about this, and if you are of that calibre then you can accomplish what this script will do in any event! The script we will be using is [available here](https://github.com/eris-ltd/common/blob/master/cloud/setup/setup.sh). It is eris' cloud setup script. The script assumes that docker is installed. If you have provisioned a box via a web interface or otherwise and docker is not installed, you can set an environment variable and the script will automtically install Docker for you.
 
-Since we provisioned these instances using docker-machine we do not need to do that.
-
 ```bash
 for i in `seq 0 6`
 do
   docker-machine ssh "my-advchain-val-00$i" "curl -sSL --ssl-req https://raw.githubusercontent.com/eris-ltd/common/master/cloud/setup/setup.sh | sudo bash"
 done
 ```
-
 That's it! Eris is now installed on all the machines we just made!
 
 **N.B.** -- The script is only meant to work against Ubuntu. It is not tested against other operating systems. Should you be using RHEL, Fedora, CentOS or another Linux distribution you should follow our normal [getting started](/tutorials/getting-started) sequence.
+
+**N.B.** Since we provisioned these instances using docker-machine we do not need to do that. The `eris init` command with the `--machine` flag will intitialize `eris` on named machines.
+
+```bash
+for i in `seq 0 6`
+do
+  eris init --yes --machine my-advchain-val-00$i
+done
+```
 
 **Troubleshooting**
 
