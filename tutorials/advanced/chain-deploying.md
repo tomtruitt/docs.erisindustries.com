@@ -73,12 +73,11 @@ vm_log = false
 
 **N.B.**
 
-For decentralized purists that may not like a single point of failure, a comma delimited list of peer IP addresses may be entered for `seeds`. To find the IP addresses of all machines:
+For decentralized purists that may not like a single point of failure, a comma delimited list of peers may be entered for `seeds`. To find the IP addresses of all docker machines:
 
 ```bash
-$ docker-machine ls
+docker-machine ip $(docker-machine ls -q)
 ```
-In this case you'll copy the IP address and disregard the port `:2376` which is used by docker-machine.
 
 **End N.B.**
 
