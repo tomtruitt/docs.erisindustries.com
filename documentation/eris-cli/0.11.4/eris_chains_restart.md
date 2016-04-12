@@ -1,40 +1,20 @@
 ---
 
 layout:     documentation
-title:      "Documentation | eris:cli | eris actions ls"
+title:      "Documentation | eris:cli | eris chains restart"
 
 ---
 
-# eris actions ls
+# eris chains restart
 
-List known action definition files.
+Restart chain.
 
 ## Synopsis
 
-List known action definition files.
-
-The --json flag dumps the known definition file information 
-in the JSON format.
-
-The -f flag specifies an alternate format for the list, using the syntax
-of Go text templates. The struct passed to the Go template is this
-
-  type Definition struct {
-    Name       string       // action name
-    Definition string       // definition file name
-  }
-
+Restart chain.
 
 ```bash
-eris actions ls
-```
-
-## Options
-
-```
-      --format string   alternate format for columnized output
-      --json            machine readable output
-  -k, --known           list all the action definition files that exist
+eris chains restart NAME
 ```
 
 ## Options inherited from parent commands
@@ -47,7 +27,7 @@ eris actions ls
 
 ## See Also
 
-* [eris actions](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions/)	 - Manage and perform structured actions.
+* [eris chains](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains/)	 - Start, stop, and manage blockchains.
 
 ## Specifications
 

@@ -48,7 +48,7 @@ eris actions
 * [eris actions edit](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_edit/)	 - Edit an action definition file.
 * [eris actions export](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_export/)	 - Export an action definition file to IPFS.
 * [eris actions import](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_import/)	 - Import an action definition file from Github or IPFS.
-* [eris actions ls](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_ls/)	 - List all registered action definition files.
+* [eris actions ls](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_ls/)	 - List known action definition files.
 * [eris actions new](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_new/)	 - Create a new action definition file.
 * [eris actions remove](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_remove/)	 - Remove an action definition file.
 * [eris actions rename](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_actions_rename/)	 - Rename an action.

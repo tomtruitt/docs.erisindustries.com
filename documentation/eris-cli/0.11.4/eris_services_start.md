@@ -21,8 +21,20 @@ from the command line.
 To stop the service use:      [eris services stop NAME].
 To view a service's logs use: [eris services logs NAME].
 
+You can redefine service ports accessible over the network with
+the --ports flag.
+
+
 ```bash
 eris services start NAME
+```
+
+## Examples
+
+```bash
+$ eris services start ipfs --ports 17000 -- map the first port from the definition file to the host port 17000
+$ eris services start ipfs --ports 17000,18000- -- redefine the first and the second port mappings and autoincrement the rest
+$ eris services start ipfs --ports 50000:5001 -- redefine the specific port mapping (published host port:exposed container port)
 ```
 
 ## Options
@@ -31,6 +43,7 @@ eris services start NAME
   -c, --chain string   specify a chain the service depends on
   -e, --env value      multiple env vars can be passed using the KEY1=val1,KEY2=val2 syntax (default [])
   -l, --links value    multiple containers can be linked can be passed using the KEY1:val1,KEY2:val2 syntax (default [])
+      --ports string   reassign ports
   -p, --publish        publish random ports
 ```
 

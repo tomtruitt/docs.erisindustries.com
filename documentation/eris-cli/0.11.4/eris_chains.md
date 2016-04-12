@@ -56,6 +56,7 @@ eris chains
 * [eris chains new](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_new/)	 - Create and start a new blockhain.
 * [eris chains ports](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_ports/)	 - Print port mappings.
 * [eris chains rename](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_rename/)	 - Rename a blockchain.
+* [eris chains restart](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_restart/)	 - Restart chain.
 * [eris chains rm](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_rm/)	 - Remove an installed chain.
 * [eris chains start](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_start/)	 - Start a blockchain.
 * [eris chains stop](https://docs.erisindustries.com/documentation/eris-cli/0.11.4/eris_chains_stop/)	 - Stop a running blockchain.

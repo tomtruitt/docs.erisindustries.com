@@ -34,19 +34,31 @@ unless the --serverconf or --dir flag is passed.
 
 If you would like to create a genesis.json then please utilize [eris chains make]
 
+You can redefine the chain ports accessible over the network with the --ports flag.
+
+
 ```bash
 eris chains new NAME
+```
+
+## Examples
+
+```bash
+$ eris chains new simplechain --ports 4000 -- map the first port from the definition file to the host port 40000
+$ eris chains new simplechain --ports 40000,50000- -- redefine the first and the second port mapping and autoincrement the rest
+$ eris chains new simplechain --ports 46656:50000 -- redefine the specific port mapping (published host port:exposed container port)
 ```
 
 ## Options
 
 ```
-  -a, --api           turn the chain on using erisdb's api (default true)
-      --dir string    a directory whose contents should be copied into the chain's main dir
-  -e, --env value     multiple env vars can be passed using the KEY1=val1,KEY2=val2 syntax (default [])
-  -l, --links value   multiple containers can be linked can be passed using the KEY1:val1,KEY2:val2 syntax (default [])
-  -z, --logrotate     turn on logrotate as a dependency to handle long output
-  -p, --publish       publish random ports
+  -a, --api            turn the chain on using erisdb's api (default true)
+      --dir string     a directory whose contents should be copied into the chain's main dir
+  -e, --env value      multiple env vars can be passed using the KEY1=val1,KEY2=val2 syntax (default [])
+  -l, --links value    multiple containers can be linked can be passed using the KEY1:val1,KEY2:val2 syntax (default [])
+  -z, --logrotate      turn on logrotate as a dependency to handle long output
+      --ports string   reassign ports
+  -p, --publish        publish random ports
 ```
 
 ## Options inherited from parent commands

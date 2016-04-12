@@ -24,6 +24,7 @@ eris chains exec NAME
       --image string   Docker image
   -i, --interactive    interactive shell
   -l, --links value    multiple containers can be linked can be passed using the KEY1:val1,KEY2:val2 syntax (default [])
+      --ports string   reassign ports
   -p, --publish        publish random ports
 ```
 

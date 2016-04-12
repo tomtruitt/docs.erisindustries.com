@@ -25,22 +25,18 @@ wizard (no flags) or when using with the other flags then keys will be made alon
 with the genesis.jsons and priv_validator.jsons so that everything is ready to go
 for you to [eris chains new].
 
-Optionally chains make provides packages of outputed priv_validator and genesis.json
+Optionally chains make provides packages of outputted priv_validator and genesis.json
 which you can email or send on your slack to your coworkers. These packages can
 be tarballs or zip files, and **they will contain the private keys** so please
 be aware of that.
 
 The make process will *not* start a chain for you. You will want to use
-
-[eris chains new chainName --dir chainName]
-
-for that which will import all of the files which make creates into containers and
-start your shiny new chain.
+the [eris chains new chainName --dir chainName] for that which will import all 
+of the files which make creates into containers and start your shiny new chain.
 
 If you have any questions on eris chains make, please see the eris-cm (chain manager)
 documentation here:
 https://docs.erisindustries.com/documentation/eris-cm/latest/eris-cm/
-
 
 ```bash
 eris chains make NAME
@@ -55,7 +51,6 @@ $ eris chains make myChain --account-types=Root:1,Developer:0,Validator:0,Partic
 $ eris chains make myChain --account-types=Root:1,Developer:0,Validator:0,Participant:1 --chain-type=simplechain -- account types trump chain types, this command will use the flags to make the chain (non-interactive)
 $ eris chains make myChain --known --validators /path/to/validators.csv --accounts /path/to/accounts.csv -- will use the csv file to make your chain named myChain (non-interactive) (won't make keys)
 $ eris chains make myChain --tar -- will create the chain and save each of the "bundles" as tarballs which can be used by colleagues to start their chains
-
 ```
 
 ## Options

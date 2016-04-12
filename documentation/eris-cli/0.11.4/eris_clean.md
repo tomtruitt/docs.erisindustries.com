@@ -7,15 +7,14 @@ title:      "Documentation | eris:cli | eris clean"
 
 # eris clean
 
-Clean up your eris working environment.
+Clean up your Eris working environment.
 
 ## Synopsis
 
-By default, this command will stop and
-	force remove all eris containers (chains, services, 
-	datas, etc). Addtional flags can be used to remove
-	the eris home directory and eris images. Useful
-	for rapid development with docker containers.
+By default, this command will stop and force remove all Eris containers 
+(chains, services, data, etc.) Addtional flags can be used to remove 
+the Eris home directory and Eris images. Useful for rapid development 
+with Docker containers.
 
 ```bash
 eris clean

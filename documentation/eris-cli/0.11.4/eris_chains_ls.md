@@ -11,26 +11,47 @@ Lists everything chain related.
 
 ## Synopsis
 
-Lists all: chain definition files (--known), current existing
-containers for each chain (--existing), current running containers for each
-chain (--running).
+List chains or known chain definition files.
 
-If no known chains exist yet, create a new blockchain with: [eris chains new NAME]
-command.
+The -r flag limits the output to running chains only.
 
-Services are handled using the [eris services] command.
+The --json flag dumps the container or known files information
+in the JSON format.
+
+The -q flag is equivalent to the '{{.ShortName}}' format.
+
+The -f flag specifies an alternate format for the list, using the syntax
+of Go text templates. See the more detailed description in the help
+output for the [eris ls] command. The struct passed to the Go template
+for the -k flag is this
+
+  type Definition struct {
+    Name       string       // chain name
+    Definition string       // definition file name
+  }
+
+The -k flag displays the known definition files. 
 
 ```bash
 eris chains ls
 ```
 
+## Examples
+
+```bash
+$ eris chains ls -f '{{.ShortName}}\t{{.Info.Config.Image}}\t{{ports .Info}}'
+$ eris chains ls -f '{{.ShortName}}\t{{.Info.State}}'
+```
+
 ## Options
 
 ```
-  -e, --existing   list all the all current containers which exist for a chain
-  -k, --known      list all the chain definition files that exist
-  -q, --quiet      machine parsable output
-  -r, --running    list all the current containers which are running for a chain
+  -a, --all             show extended output
+  -f, --format string   alternate format for columnized output
+      --json            machine readable output
+  -k, --known           list all the chain definition files that exist
+  -q, --quiet           show a list of chain names
+  -r, --running         show running containers
 ```
 
 ## Options inherited from parent commands

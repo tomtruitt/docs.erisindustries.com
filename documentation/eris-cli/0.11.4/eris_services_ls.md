@@ -11,28 +11,49 @@ Lists everything service related.
 
 ## Synopsis
 
-Lists all: service definition files (--known), current existing containers
-for each service (--existing), and current running containers
-for each service (--running).
+List services or known service definition files.
 
-Known services can be started with the [eris services start NAME] command.
-To install a new service, use [eris services import]. Services include
-all executable services supported by the Eris platform which are
-NOT blockchains or key managers.
+The -r flag limits the output to running services only.
 
-Blockchains are handled using the [eris chains] command.
+The --json flag dumps the container or known files information
+in the JSON format.
+
+The -q flag is equivalent to the '{{.ShortName}}' format.
+
+The -f flag specifies an alternate format for the list, using the syntax
+of Go text templates. See the more detailed description in the help
+output for the [eris ls] command. The struct passed to the Go template
+for the -k flag is this
+
+  type Definition struct {
+    Name       string       // service name
+    Definition string       // definition file name
+  }
+
+The -k flag displays the known definition files.
 
 ```bash
 eris services ls
 ```
 
+## Examples
+
+```bash
+$ eris services ls -f '{{.ShortName}}\t{{.Info.Config.Cmd}}\t{{.Info.Config.Entrypoint}}'
+$ eris services ls -f '{{.ShortName}}\t{{.Info.Config.Image}}\t{{ports .Info}}'
+$ eris services ls -f '{{.ShortName}}\t{{.Info.Config.Volumes}}\t{{.Info.Config.Mounts}}'
+$ eris services ls -f '{{.Info.ID}}\t{{.Info.HostConfig.VolumesFrom}}'
+```
+
 ## Options
 
 ```
-  -e, --existing   list all the all current containers which exist for a service
-  -k, --known      list all the service definition files that exist
-  -q, --quiet      machine parsable output
-  -r, --running    list all the current containers which are running for a service
+  -a, --all             show extended output
+  -f, --format string   alternate format for columnized output
+      --json            machine readable output
+  -k, --known           list all the service definition files that exist
+  -q, --quiet           show a list of service names
+  -r, --running         show running containers only
 ```
 
 ## Options inherited from parent commands

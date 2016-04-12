@@ -23,6 +23,7 @@ eris services exec NAME
   -e, --env value       multiple env vars can be passed using the KEY1=val1,KEY2=val2 syntax (default [])
   -i, --interactive     interactive shell
   -l, --links value     multiple containers can be linked can be passed using the KEY1:val1,KEY2:val2 syntax (default [])
+      --ports string    reassign ports
   -p, --publish         publish random ports
       --volume string   mount a volume /home/ubuntu/.eris/VOLUME on a host machine to a /home/eris/.eris/VOLUME on a container
 ```

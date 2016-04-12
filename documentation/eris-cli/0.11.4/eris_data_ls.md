@@ -11,16 +11,33 @@ List the data containers eris manages for you
 
 ## Synopsis
 
-List the data containers eris manages for you
+List data containers.
+
+The --json flag dumps the container or known files information
+in the JSON format.
+
+The -f flag specifies an alternate format for the list, using the syntax
+of Go text templates. See the more detailed description in the help
+output for the [eris ls] command.
 
 ```bash
 eris data ls
 ```
 
+## Examples
+
+```bash
+$ eris data ls -f '{{.ShortName}}\t{{.Info.Config.Image}}\t{{index .Labels "eris:SERVICE"}}' -- show data container image and owner service name
+$ eris data ls -f '{{.ShortName}}\t{{.Info.Config.Volumes}}\t{{.Info.Config.Mounts}}' -- show data container volumes and mounts
+$ eris data ls -f '{{.ShortName}}\t{{.Info.Config.Env}}' -- container environment
+```
+
 ## Options
 
 ```
-      --quiet   machine readable output; also used in tests
+  -a, --all             dummy flag for symmetry with [services ls -a] and [chains ls -a]
+  -f, --format string   alternate format for columnized output
+      --json            machine readable output
 ```
 
 ## Options inherited from parent commands
