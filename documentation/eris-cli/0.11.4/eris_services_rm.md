@@ -26,6 +26,7 @@ eris services rm NAME
   -x, --data    remove data containers after stopping
       --file    remove service definition file as well as service container
   -f, --force   kill the container instantly without waiting to exit
+      --image   remove the services' docker image
   -o, --vol     remove volumes (default true)
 ```
 
