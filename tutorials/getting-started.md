@@ -99,7 +99,7 @@ We have (beta) `apt-get` support for most current versions of Debain and Ubuntu.
 
 ```bash
 sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys DDA1D0AB
-sudo echo "deb https://apt.eris.industries DIST main" > /etc/apt/sources.list.d/eris.list
+sudo su -c "echo deb https://apt.eris.industries DIST main > /etc/apt/sources.list.d/eris.list"
 ```
 
 **Note** in the above command you **must** replace `DIST` with the distribution codename for your version of Debian or Ubuntu (vivid, trusty, jessie, etc.). We intend to make this easier in coming releases. We do not use the major-minor distribution pattern (e.g., `ubuntu-trusty`) as Docker does, but rather we just use (`trusty`) as the DIST codename.
@@ -116,7 +116,7 @@ sudo apt-get install eris
 We now have (experimental) `yum` support for most current versions of Fedora, CentOS, RHEL, etc. If you wish to use yum to install `eris` then you will perform the following:
 
 ```bash
-sudo curl -sSL https://yum.eris.industries/eris.repo > /etc/yum.repos.d/eris.repo
+sudo su -c "curl -sSL https://yum.eris.industries/eris.repo > /etc/yum.repos.d/eris.repo"
 yum install eris-cli
 ```
 
