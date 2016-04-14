@@ -60,8 +60,8 @@ and simple to wrangle the dragons of smart contract blockchains.
 - [eris:db.js documentation](/documentation/eris-db.js/)
 - [eris:contracts.js overview](/documentation/eris-contracts-js/)
 - [eris:compilers overview](/documentation/eris-compilers/)
-- [eris:legal overview]({{ site.data.sites["main"].url }}/components/tool-specific/erislegal/)
-- [eris:legal command reference and specifications](/documentation/tool-specific/erislegal/)
+- [eris:legal overview]({{ site.data.sites["main"].url }}/components/erislegal/)
+- [eris:legal command reference and specifications](/documentation/erislegal/)
 
 # Tool-Specific Tutorials
 
@@ -73,7 +73,7 @@ and simple to wrangle the dragons of smart contract blockchains.
 - [eris:cli Walkabout: Files]({{ site.data.sites["blog_eng"].url }}/tutorials/2015/08/05/ipfs-as-a-service/) (Blog Post)
 - [Exporting and Importing Your Keys](/tutorials/tool-specific/keyexporting)
 - [Working with the blockchain using bash and curl](/tutorials/tool-specific/eris_by_curl)
-- [Updating your genesis.json](/tutorials/tool-specific/genesis-updating/)
+- [Updating your genesis.json](/tutorials/tool-specific/genesisupdating/)
 
 # Community
 
