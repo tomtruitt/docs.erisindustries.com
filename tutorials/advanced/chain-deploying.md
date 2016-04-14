@@ -139,7 +139,7 @@ Now let's get those services turned on.
 ```bash
 for i in `seq 0 6`
 do
-  eris services start watchtower logrotate logspout --machine "my-advchain-val-00$i"
+  eris services start watchtower logsrotate logspout --machine "my-advchain-val-00$i"
 done
 ```
 
