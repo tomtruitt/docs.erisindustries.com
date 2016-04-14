@@ -117,7 +117,7 @@ You're chain should now be running.
 We're now going to start a few services which help us manage cloud instances.
 
 1. We're going to start a `logrotate` service. This service is **absolutely essential** when working with cloud boxes. We have had **dozens** of cloud nodes overfill on us due to logs overloading the allocated storage space on the node. To overcome this, we use a [logs rotator service](https://github.com/tutumcloud/logrotate) which disgards the old logs.
-2. To couterbalance this we also will be starting a `logspout` service. This service will "spout" our logs to a logs "collector" service. To provide this service we use PapertrailApp, but [you could use others](https://github.com/gliderlabs/logspout).
+2. To counterbalance this we also will be starting a `logspout` service. This service will "spout" our logs to a logs "collector" service. To provide this service we use PapertrailApp, but [you could use others](https://github.com/gliderlabs/logspout).
 3. We're going to start a `watchtower` service. This service will ping the docker hub for the images on the docker machine and if there are any updates to the image, they will automatically pull in the updates and gracefully restart all our containers for us. We can do this because of docker's fine grained tags system allows us to fine tune what docker image we are using. Users get the benefit when turning a `watchtower` service on that any tested pushes or security fixes which the service providers push to the docker hub will automatically be updated within about 5 minutes of pushing.
 
 But first we need to make a simple change to one file. Let's edit the logspout service.
