@@ -44,7 +44,7 @@ After you run that command, then please log out of the current shell and open a 
 
 The above command *may* be skipped, but if you do, then you will need to run all `eris` commands either as the root user or using `sudo`.
 
-**Note** Docker does not run on 32bit architecture. If you are using a Linux box, please **make sure** it is 64bit architecture.
+**Note** If you are using a Linux or a Mac OSX box, please **make sure** you are installing Docker for the 64 bit architecture.
 
 ### Docker Installation for OSX & Windows
 
@@ -52,11 +52,11 @@ If you are on OSX or Windows, the [Docker Toolbox](https://www.docker.com/toolbo
 
 **Note** that the Docker Toolbox will install VirtualBox by default. Because Docker runs by connecting into a **Linux** kernel, Docker only runs on Linux OS's at this time. While Docker is reportedly working on native solutions for other operating systems, at this time a Linux operating system is required.
 
-By default the Docker Toolbox will use VirtualBox to create a very minimal Linux virtual machine with the Docker daemon preinstalled. The toolbox will install Docker-Machine which is used to start, stop, reboot, remove, etc. virtual machines via VirtualBox's API.
+By default the Docker Toolbox will use VirtualBox to create a very minimal Linux virtual machine with the Docker daemon preinstalled. The toolbox will install Docker Machine (`docker-machine`) which is used to start, stop, reboot, remove, etc. virtual machines via VirtualBox's API.
 
 `eris` has been built to be able to connect into the Docker daemon running within a VirtualBox minimal Linux virtual machine by default and without any effort on your part (other than installing the Docker Toolbox).
 
-If virtualbox gives you trouble, then use [docker machine's plugins](https://github.com/docker/machine/blob/master/docs/AVAILABLE_DRIVER_PLUGINS.md) and create your `eris` machine [in the cloud](/tutorials/advanced/chain-deploying/).
+If VirtualBox gives you trouble, then use [docker machine's plugins](https://github.com/docker/machine/blob/master/docs/AVAILABLE_DRIVER_PLUGINS.md) and create your `eris` machine [in the cloud](/tutorials/advanced/chain-deploying/).
 
 ### OSX Only
 
@@ -69,9 +69,17 @@ brew install docker docker-machine
 
 ### Windows Only
 
-**N.B.** No matter whether you follow the below or not, you'll want to run eris commands either from `git bash` or from the `Docker Quickstart Terminal` (which is really just `git bash`) window. While most commands will work from the `cmd` terminal, it is much more complicated to get right. All the tutorials will assume that you are using the `Docker Quickstart Terminal` and are structured to support **only** that environment.
+**N.B.** No matter whether you follow the below or not, you'll want to run `eris` commands either from `git bash` or from the `Docker Quickstart Terminal` (which is really just `git bash`) window. If you prefer to use the `cmd` as a terminal, you might find this snippet which sets an environment for you Docker Machine helpful:
 
-If you're a chocolatey user then:
+```cmd
+@echo off
+
+FOR /f "tokens=*" %%i IN ('"docker-machine.exe" env <Machine Name>') DO %%i
+```
+
+All the tutorials will assume that you are using the `Docker Quickstart Terminal` and are structured to support **only** that environment.
+
+If you're a [Chocolatey](https://chocolatey.org) user then:
 
 ```bash
 choco install virtualbox docker docker-machine
@@ -79,13 +87,13 @@ choco install virtualbox docker docker-machine
 
 ### All Platforms
 
-Make sure that everything is setup with Docker by running:
+Make sure that everything is set up with Docker by running:
 
 ```bash
 docker version
 ```
 
-**Note** you will need to make sure that you perform the above command for the *user* which will be running eris.
+**Note** you will need to make sure that you perform the above command for the *user* which will be running Eris.
 
 ## Install Eris
 
@@ -93,16 +101,16 @@ docker version
 
 We distribute binaries via our [Github Releases Page](https://github.com/eris-ltd/eris-cli/releases). You will simply need to download the proper zip or tarball for your architecture and then extract that into a place in your `PATH`.
 
-### apt-get installation
+### Debian Package Installation
 
-We have (beta) `apt-get` support for most current versions of Debain and Ubuntu. If you wish to use apt-get to install `eris` then you will simply perform the following:
+We have (beta) `apt-get` support for most current versions of Debian and Ubuntu. If you wish to use apt-get to install `eris` then you will simply perform the following:
 
 ```bash
 sudo apt-key adv --keyserver hkp://pool.sks-keyservers.net --recv-keys DDA1D0AB
 sudo su -c "echo deb https://apt.eris.industries DIST main > /etc/apt/sources.list.d/eris.list"
 ```
 
-**Note** in the above command you **must** replace `DIST` with the distribution codename for your version of Debian or Ubuntu (vivid, trusty, jessie, etc.). We intend to make this easier in coming releases. We do not use the major-minor distribution pattern (e.g., `ubuntu-trusty`) as Docker does, but rather we just use (`trusty`) as the DIST codename.
+**Note** in the above command you have to replace `DIST` with the distribution codename for your version of Debian or Ubuntu (`vivid`, `trusty`, `jessie`, etc.). We intend to make this easier in coming releases. We do not use the major-minor distribution pattern (e.g., `ubuntu-trusty`) as Docker does, but rather we just use (`trusty`) as the DIST codename.
 
 Once the apt repository is added to your sources then:
 
@@ -111,16 +119,16 @@ sudo apt-get update
 sudo apt-get install eris
 ```
 
-### yum installation
+### RPM Package Installation
 
-We now have (experimental) `yum` support for most current versions of Fedora, CentOS, RHEL, etc. If you wish to use yum to install `eris` then you will perform the following:
+We now have (experimental) RPM support for most current versions of Fedora, CentOS, RHEL, etc. If you wish to use `yum` to install `eris` then you will perform the following:
 
 ```bash
 sudo su -c "curl -sSL https://yum.eris.industries/eris.repo > /etc/yum.repos.d/eris.repo"
 yum install eris-cli
 ```
 
-Yum support is still quite experimental, so please do not rely on it, but please do let us know any issues you have with the installation and we will make sure to address those as quickly as we can.
+RPM support is still quite experimental, so please do let us know of any issues you have with this installation and we will make sure to address those as quickly as we can.
 
 ### Building From Source
 
@@ -133,6 +141,8 @@ Check that everything installed correctly with:
 ```bash
 eris init
 ```
+
+The command will begin setting you up.
 
 ## Troubleshooting Your Install
 
@@ -159,7 +169,7 @@ eris chains ls
 Stop and remove your chain:
 
 ```bash
-eris chains stop -rxf test_chain
+eris chains rm -xf test_chain
 ```
 
 Obviously, you will want an ability to make chains which you properly parameterize. As such you can always type:
@@ -176,13 +186,13 @@ Eris does not only work with permissioned smart contract networks. It works just
 eris services start btcd
 ```
 
-Want to run ethereum?
+Want to run Ethereum?
 
 ```bash
 eris services start eth
 ```
 
-That's it. Your chain is rolled!
+That's it! Your chain is rolled!
 
 # Step 3: Build (and run) your Distributed Application
 
@@ -191,7 +201,7 @@ That's it. Your chain is rolled!
 Let's remove all of the eris "stuff" before we move on to the next portion of the tutorials:
 
 ```bash
-eris clean
+eris clean 
 ```
 
 Now you're ready to build and run your distributed application!
