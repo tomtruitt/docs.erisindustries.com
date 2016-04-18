@@ -71,7 +71,7 @@ brew install docker docker-machine
 
 **N.B.** No matter whether you follow the below or not, you'll want to run `eris` commands either from `git bash` or from the `Docker Quickstart Terminal` (which is really just `git bash`) window. 
 
-If you prefer to use the `cmd` as a terminal, you still can, every command should work as expected, though all the tutorials will assume that you are using the `Docker Quickstart Terminal` and are structured to support **only** that environment.
+If you prefer to use the `cmd` as a terminal, you still can: every command should work as expected, though all the tutorials will assume that you are using the `Docker Quickstart Terminal` and are structured to support **only** that environment.
 
 If you're a [Chocolatey](https://chocolatey.org) user then:
 
