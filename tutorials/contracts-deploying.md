@@ -253,7 +253,7 @@ Container eris_interactive_eris_service_idi_tmp_deploy_1 exited with status 1
 
 That is not a very helpful error, we realize. Usually, but not always means that there is a problem with your chain. To debug this follow this sequence:
 
-* Check that the account you are using to deply the contracts is in the genesis.json on your host (`cat ~/.eris/chains/simplechain/genesis.json`).
+* Check that the account you are using to deploy the contracts is in the genesis.json on your host (`cat ~/.eris/chains/simplechain/genesis.json`).
 * Check that the genesis.json in the chain's data container matches the one in your `chain_dir` (`eris chains cat simplechain genesis`).
 
 If these are not the same, then you will need to reset your chain:
@@ -266,7 +266,7 @@ eris chains new simplechain --dir simplechain
 If those are the same, the next thing to check is that the priv_validators are fine.
 
 * Check the priv_validator.json (which is the key that the eris chain uses) on your host (`cat ~/.eris/chains/simplechain/priv_validator.json`).
-* Check the priv_validator.json in the chain's data container matches the one in your `chain_dir` (`eris data exec simplechain "cat /home/eris/.eris/chains/simplechain/priv_validator.json`).
+* Check the priv_validator.json in the chain's data container matches the one in your `chain_dir` (`eris data exec simplechain "cat /home/eris/.eris/chains/simplechain/priv_validator.json"`).
 
 If they're different reset the chain (see above for instructions).
 
