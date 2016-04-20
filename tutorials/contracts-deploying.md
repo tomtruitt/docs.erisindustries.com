@@ -260,7 +260,7 @@ If these are not the same, then you will need to reset your chain:
 
 ```bash
 eris chains stop -rxf simplechain
-eris chains new simplechain --dir simplechain
+eris chains new simplechain --dir $chain_dir_this
 ```
 
 If those are the same, the next thing to check is that the priv_validators are fine.
